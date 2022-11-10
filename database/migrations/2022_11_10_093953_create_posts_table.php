@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('body');
             $table->text('excerpt');
+            $table->foreignId('category_id');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
